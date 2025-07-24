@@ -122,7 +122,7 @@ async def save_user_data(user_data):
         await conn.commit()
 
 async def start_matching(update: Update, context: CallbackContext):
-    reply_keyboard = [[KeyboardButton('Like'), KeyboardButton('Don't like')]]
+    reply_keyboard = [[KeyboardButton("Like"), KeyboardButton("Don't like")]]
     await update.message.reply_text(
         'I have found a potential match for you. Are you interested?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True)
